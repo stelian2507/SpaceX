@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class TeslaS extends Component {
+class Future extends Component {
     render() {
         return (
             <div>
@@ -10,4 +10,4 @@ class TeslaS extends Component {
     }
 }
 
-export default TeslaS;
+export default Future;

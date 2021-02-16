@@ -1,12 +1,13 @@
+import React, { Component } from 'react';
 
-import React from 'react';
+class Home extends Component {
+    render() {
+        return (
+            <div>
+                
+            </div>
+        );
+    }
+}
 
-const TeslaAccount = () => {
-    return (
-        <div>
-            
-        </div>
-    );
-};
-
-export default TeslaAccount;
+export default Home;

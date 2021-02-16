@@ -6,7 +6,7 @@ import './App.css';
 import axios from 'axios';
 
 
-const element = <h1>Hello, world!</h1>;
+
 const statement = <h1> React is cool! </h1>;
 function App() {
   useEffect(() =>{
@@ -18,7 +18,7 @@ console.log(res);
   },[])
 
   return <div className="App">
- {statement} {element}
+ {statement} 
   </div>;
 }
 

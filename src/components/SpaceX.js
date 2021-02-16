@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Tesla3 extends Component {
+class SpaceX extends Component {
     render() {
         return (
             <div>
@@ -10,4 +10,4 @@ class Tesla3 extends Component {
     }
 }
 
-export default Tesla3;
+export default SpaceX;
