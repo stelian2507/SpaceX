@@ -1,4 +1,4 @@
-npm install axios
+
 import React from 'react';
 
 const TeslaAccount = () => {
