@@ -7,7 +7,7 @@ import axios from 'axios';
 
 
 
-const statement = <h1> React is cool! </h1>;
+const statement = <h1> Space X </h1>;
 function App() {
   useEffect(() =>{
     axios.get('https://api.spacexdata.com/v4/launches/latest')
