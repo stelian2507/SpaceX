@@ -8,7 +8,7 @@ const element = <h1>Hello, world!</h1>;
 const statement = <h1> React is cool! </h1>;
 function App() {
   return <div className="App">
- {statement}
+ {statement} {element}
   </div>;
 }
 
