@@ -1,13 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Future extends Component {
-    render() {
-        return (
-            <div>
-               futureeeeee 
-            </div>
-        );
-    }
+function Future(props) {
+    return (
+        <div>
+            Future
+        </div>
+    );
 }
 
 export default Future;

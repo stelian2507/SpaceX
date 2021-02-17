@@ -1,16 +1,40 @@
-import React, { Component } from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
 
-class Home extends Component {
-    render() {
-        return (
-            <div>
-                <div>1</div>
-                <div>2</div>
-                <div>3</div>
-                <div>4</div>
-            </div>
-        );
+function Home(props) {
+    let [space, setspace] = useState(['']);
+
+    const randNum = Math.floor(Math.random() * 255);
+
+    let style = {
+        backgroundColor: `rgb(${randNum},${randNum},${randNum})`,
+    };
+
+    useEffect(() => {
+        axios.get('https://api.spacexdata.com/v3/rockets').then((res) => {
+            console.log(res.data[0].rocket_name);
+        });
+    }, []);
+
+    const showspace = () => {
+        return space.map((eachspace) => {
+            console.log(eachspace)
+            return (
+                <div>
+                    {eachspace.rocket_name},
+                    Cost Per Lunch:
+                    {eachspace.cost_per_launch}
+                </div>
+            )
+        })
     }
+
+    return (
+        <div>
+            {showspace()}
+        </div>
+    );
 }
 
 export default Home;

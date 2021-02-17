@@ -1,13 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class SpaceX extends Component {
-    render() {
-        return (
-            <div>
-                SpaceXxxxxx
-            </div>
-        );
-    }
+function SpaceX(props) {
+    return (
+        <div>
+            SpaceX
+        </div>
+    );
 }
 
 export default SpaceX;
