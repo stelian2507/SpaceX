@@ -4,7 +4,7 @@ class SpaceX extends Component {
     render() {
         return (
             <div>
-                
+                SpaceX
             </div>
         );
     }
