@@ -5,15 +5,12 @@ import { Link } from 'react-router-dom';
 function Home(props) {
     let [space, setspace] = useState(['']);
 
-    const randNum = Math.floor(Math.random() * 255);
-
-    let style = {
-        backgroundColor: `rgb(${randNum},${randNum},${randNum})`,
-    };
+  
 
     useEffect(() => {
         axios.get('https://api.spacexdata.com/v3/rockets').then((res) => {
             console.log(res.data[0].rocket_name);
+            setspace(res.data);
         });
     }, []);
 
@@ -21,18 +18,20 @@ function Home(props) {
         return space.map((eachspace) => {
             console.log(eachspace)
             return (
-                <div>
-                    {eachspace.rocket_name},
-                    Cost Per Lunch:
-                    {eachspace.cost_per_launch}
+                <div className='rockets'>
+                    {eachspace.rocket_name}
+                    <Link to='./Info' ><img src={eachspace.flickr_images}/></Link>
+
+                   
                 </div>
-            )
-        })
-    }
+            );
+        });
+    };
 
     return (
         <div>
             {showspace()}
+          
         </div>
     );
 }
