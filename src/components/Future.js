@@ -4,7 +4,7 @@ class Future extends Component {
     render() {
         return (
             <div>
-                
+               futureeeeee 
             </div>
         );
     }

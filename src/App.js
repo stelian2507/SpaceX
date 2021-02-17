@@ -24,11 +24,10 @@ function App() {
     <div className="App">
       <NavBar />
       <Switch>
-        <Route exact path="/Home" render={(props) => <Home {...props} />} />
+      <Route exact path="/" render={(props) => <Home {...props} />} />
+      <Route exact path="/SpaceX" render={(props) => <SpaceX {...props} />} />
+        <Route exact path="/Future" render={(props) => <Future {...props} />} />
       </Switch>
-      {/* <Home />
-      <SpaceX />
-      <Future /> */}
     </div>
   );
 }
