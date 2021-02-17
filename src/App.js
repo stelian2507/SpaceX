@@ -4,9 +4,10 @@ import logo from './logo.svg';
 import './App.css';
 import axios from 'axios';
 import NavBar from "./components/NavBar"
+import { BrowserRouter } from 'react-router-dom'
+// import Home from './components/Home'
 
 
-const statement = <h1> Space X </h1>;
 function App() {
   useEffect(() =>{
     axios.get('https://api.spacexdata.com/v4/launches/latest')
@@ -18,7 +19,7 @@ console.log(res);
 
   return (
   <div className="App">
- {statement} 
+
  <NavBar/>
   </div>
   );
