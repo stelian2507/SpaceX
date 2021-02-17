@@ -1,10 +1,9 @@
-// App.js
 
 import React, {useEffect} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import axios from 'axios';
-
+import NavBar from "./components/NavBar"
 
 
 const statement = <h1> Space X </h1>;
@@ -17,9 +16,12 @@ console.log(res);
     })
   },[])
 
-  return <div className="App">
+  return (
+  <div className="App">
  {statement} 
-  </div>;
+ <NavBar/>
+  </div>
+  );
 }
 
 export default App;
