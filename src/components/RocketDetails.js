@@ -14,7 +14,7 @@ function Rocketdetails(props) {
     // }, []);
 
     return (
-        <div>
+        <div className='rocketDetails'>
             Falcone One
             {/* {Rocketdetails.description}{Rocketdetails.engines}
             {Rocketdetails.first_flight}{Rocketdetails.flicker_image[1]} */}

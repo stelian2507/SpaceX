@@ -27,9 +27,7 @@ function App() {
         <Route exact path="/" render={(props) => <SpaceShips {...props} />} />
         <Route exact path="/SpaceX" render={(props) => <SpaceX {...props} />} />
         <Route exact path="/Future" render={(props) => <Future {...props} />} />
-        {/* <Route exact path="/Info/:FalconeOne" render={(props) => <Info {...props} />} /> */}
         <Route exact path="/SpaceShips/:rocket_id" render={(props) => <RocketDetails {...props} />} />
-
       </Switch>
     </div>
   );
