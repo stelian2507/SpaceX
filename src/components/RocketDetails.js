@@ -2,24 +2,36 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
 function Rocketdetails(props) {
-    console.log(props)
+    console.log(props.match.params.rocket_id)
 
-    let [Rocketdetails, setRocketdetails] = useState([''])
+    let [rocketdetails, setrocketdetails] = useState({})
 
     useEffect(() => {
-        axios.get('https://api.spacexdata.com/v3/rockets').then((res) => {
+        axios.get(`https://api.spacexdata.com/v3/rockets/${props.match.params.rocket_id}`).then((res) => {
             console.log(res.data);
-            setRocketdetails(res.data);
+            setrocketdetails(res.data);
         });
     }, []);
 
+    function eachimage() {
+        return rocketdetails.flickr_images?.map(eachimage => {
+            return (
+          <img src={eachimage}/>
+       
+            )
+        })
+    }
+
+
+    // https://api.spacexdata.com/v3/rockets/{{rocket_id}}
     return (
         <div className='rocketDetails'>
-            Falcone One
-            {console.log('Rocket Details =', Rocketdetails?.[0].country)}
-            {Rocketdetails?.[0].country}
-            {/* {Rocketdetails.description}{Rocketdetails.engines}
-            {Rocketdetails.first_flight}{Rocketdetails.flicker_image[1]} */}
+           <p>{rocketdetails.rocket_name}</p> 
+           
+            <p>{rocketdetails.description}</p>
+           <p>{eachimage()}</p>
+
+            
         </div>
     );
 }
