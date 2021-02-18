@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function Home(props) {
     let [space, setspace] = useState(['']);
 
-  
+
 
     useEffect(() => {
         axios.get('https://api.spacexdata.com/v3/rockets').then((res) => {
@@ -20,9 +20,9 @@ function Home(props) {
             return (
                 <div className='rockets'>
                     {eachspace.rocket_name}
-                    <Link to='./Info' ><img src={eachspace.flickr_images}/></Link>
+                    <Link to='./Info' ><img src={eachspace.flickr_images} /></Link>
 
-                   
+
                 </div>
             );
         });
@@ -31,7 +31,7 @@ function Home(props) {
     return (
         <div>
             {showspace()}
-          
+
         </div>
     );
 }

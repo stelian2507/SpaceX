@@ -41,7 +41,10 @@
   display: flex;
   justify-content: space-around;
   padding: 30px;
-  background-color: red;
+  background-color: white;
+  position:fixed;
+  top:0;
+  width: 100%;
 }
 
 .rockets img{
