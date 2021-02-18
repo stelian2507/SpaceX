@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-function Home(props) {
+function SpaceShips(props) {
     let [space, setspace] = useState(['']);
 
 
@@ -20,8 +20,8 @@ function Home(props) {
             return (
                 <div className='rockets'>
                     {eachspace.rocket_name}
-                    <Link to='./Info' ><img src={eachspace.flickr_images} /></Link>
-
+                    <Link to={`/SpaceShips/${eachspace.rocket_id}`} ><img src={eachspace.flickr_images} /></Link>
+                    {/* <Link to={`/allbeers/${eachbeer._id}`}>{eachbeer.name} </Link>{' '} */}
 
                 </div>
             );
@@ -36,4 +36,4 @@ function Home(props) {
     );
 }
 
-export default Home;
+export default SpaceShips;

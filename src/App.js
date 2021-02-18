@@ -5,11 +5,11 @@ import './App.css';
 import axios from 'axios';
 import NavBar from "./components/NavBar";
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Home from './components/Home';
+import SpaceShips from './components/SpaceShips';
 import SpaceX from './components/SpaceX';
 import Future from './components/Future';
 import Info from './components/Info'
-
+import RocketDetails from './components/RocketDetails'
 
 function App() {
   // useEffect(() => {
@@ -24,10 +24,12 @@ function App() {
     <div className="App">
       <NavBar />
       <Switch>
-      <Route exact path="/" render={(props) => <Home {...props} />} />
-      <Route exact path="/SpaceX" render={(props) => <SpaceX {...props} />} />
+        <Route exact path="/" render={(props) => <SpaceShips {...props} />} />
+        <Route exact path="/SpaceX" render={(props) => <SpaceX {...props} />} />
         <Route exact path="/Future" render={(props) => <Future {...props} />} />
-        <Route exact path="/Info" render={(props) => <Info {...props} />} />
+        {/* <Route exact path="/Info/:FalconeOne" render={(props) => <Info {...props} />} /> */}
+        <Route exact path="/SpaceShips/:rocket_id" render={(props) => <RocketDetails {...props} />} />
+
       </Switch>
     </div>
   );

@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom';
 
 function SpaceX(props) {
     let [spacex, setspacex] = useState({});
-    
+
 
     useEffect(() => {
         axios.get('https://api.spacexdata.com/v3/info').then((res) => {
             //console.log(res.data[0].rocket_name);
             console.log(res.data)
             setspacex(res.data);
-           
+
         });
     }, []);
 
@@ -26,13 +26,14 @@ function SpaceX(props) {
     //             </div>
     //         );
     //     });
-    
+
     // }
     return (
-        <div>
-        {spacex.name} {spacex.founder}
+        <div className="spacex">
+            {spacex.name} {spacex.founder}
             {/* {showspacex()} */}
+            HELOOOOOOOOOOOOOO
         </div>
     );
-    }
+}
 export default SpaceX;
