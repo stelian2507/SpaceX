@@ -5,8 +5,8 @@ function NavBar(props) {
     return (
         <nav id='navigationBar'>
             <Link to="/">Space Ship</Link>
-            <Link to="Future">Future</Link>
-            <Link to="SpaceX">SpaceX</Link>
+            <Link to="/Missions">Missions</Link>
+            <Link to="/SpaceX">SpaceX</Link>
 
 
         </nav>

@@ -1,14 +1,14 @@
 
 import React, { useEffect } from 'react';
-import logo from './logo.svg';
+
 import './App.css';
-import axios from 'axios';
+
 import NavBar from "./components/NavBar";
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import SpaceShips from './components/SpaceShips';
 import SpaceX from './components/SpaceX';
-import Future from './components/Future';
-import Info from './components/Info'
+import Missions from './components/Missions';
+
 import RocketDetails from './components/RocketDetails'
 import MissionDetails from './components/MissionDetails'
 
@@ -27,7 +27,8 @@ function App() {
       <Switch>
         <Route exact path="/" render={(props) => <SpaceShips {...props} />} />
         <Route exact path="/SpaceX" render={(props) => <SpaceX {...props} />} />
-        <Route exact path="/Future/:mission_id" render={(props) => <MissionDetails {...props} />} />
+        <Route exact path="/Missions" render={(props) => <Missions {...props} />} />
+        <Route exact path="/Missions/:mission_id" render={(props) => <MissionDetails {...props} />} />
         <Route exact path="/SpaceShips/:rocket_id" render={(props) => <RocketDetails {...props} />} />
       </Switch>
     </div>

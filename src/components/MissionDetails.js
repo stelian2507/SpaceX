@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
 function Missiondetails(props) {
-    console.log(props.mission_id)
+    console.log(props)
 
     let [missiondetails, setmissiondetails] = useState({})
 
