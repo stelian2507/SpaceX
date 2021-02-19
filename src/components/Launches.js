@@ -8,9 +8,9 @@ function Launches(props) {
 
     useEffect(() => {
         axios.get('https://api.spacexdata.com/v3/launches').then((res) => {
-            let rand = Math.floor(Math.random() * 50)
-              
-        console.log(res.data[rand])
+            let rand = Math.floor(Math.random() * 100)
+
+            console.log(res.data[rand])
             setLaunches(res.data[rand]);
 
         });
@@ -22,8 +22,9 @@ function Launches(props) {
             return (
                 <div className='launchesS'>
                     {eachlaunches.data}
-                    
-                
+
+
+
                 </div>
             );
         });
@@ -31,8 +32,11 @@ function Launches(props) {
     };
     return (
         <div className="launchesX">
-            HELOOOOOOOOOOOOOO
-            {launches.links?.article_link}
+            <p>{launches.mission_name}</p>
+            <p>{launches.launch_year}</p>
+            <p>{launches.rocket?.rocket_name}</p>
+            <p>{launches.details}</p>
+            <p>{launches.links?.article_link}</p>
             {showlaunches}
         </div>
     );
