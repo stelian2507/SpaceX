@@ -10,6 +10,7 @@ import SpaceX from './components/SpaceX';
 import Future from './components/Future';
 import Info from './components/Info'
 import RocketDetails from './components/RocketDetails'
+import MissionDetails from './components/MissionDetails'
 
 function App() {
   // useEffect(() => {
@@ -26,7 +27,7 @@ function App() {
       <Switch>
         <Route exact path="/" render={(props) => <SpaceShips {...props} />} />
         <Route exact path="/SpaceX" render={(props) => <SpaceX {...props} />} />
-        <Route exact path="/Future" render={(props) => <Future {...props} />} />
+        <Route exact path="/Future/:mission_id" render={(props) => <MissionDetails {...props} />} />
         <Route exact path="/SpaceShips/:rocket_id" render={(props) => <RocketDetails {...props} />} />
       </Switch>
     </div>
