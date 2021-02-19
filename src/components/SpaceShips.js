@@ -21,15 +21,14 @@ function SpaceShips(props) {
                 <div className='rockets'>
                     {eachspace.rocket_name}
                     <Link to={`/SpaceShips/${eachspace.rocket_id}`} ><img src={eachspace.flickr_images} /></Link>
-                    {/* <Link to={`/allbeers/${eachbeer._id}`}>{eachbeer.name} </Link>{' '} */}
-
                 </div>
             );
         });
     };
 
     return (
-        <div>
+        <div className='spaceShips'>
+            Space Ships
             {showspace()}
 
         </div>

@@ -16,22 +16,18 @@ function Rocketdetails(props) {
     function eachimage() {
         return rocketdetails.flickr_images?.map(eachimage => {
             return (
-          <img src={eachimage}/>
-       
+                <img src={eachimage} />
             )
         })
     }
-
-
-    // https://api.spacexdata.com/v3/rockets/{{rocket_id}}
     return (
         <div className='rocketDetails'>
-           <p>{rocketdetails.rocket_name}</p> 
-           
-            <p>{rocketdetails.description}</p>
-           <p>{eachimage()}</p>
+            <p>{rocketdetails.rocket_name}</p>
 
-            
+            <p>{rocketdetails.description}</p>
+            <p>{eachimage()}</p>
+
+
         </div>
     );
 }
