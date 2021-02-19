@@ -6,7 +6,7 @@ function NavBar(props) {
         <nav id='navigationBar'>
             <Link to="/">Space Ship</Link>
             <Link to="/Missions">Missions</Link>
-            <Link to="/SpaceX">SpaceX</Link>
+            <Link to="/Launches">Launches</Link>
 
 
         </nav>

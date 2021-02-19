@@ -6,7 +6,7 @@ import './App.css';
 import NavBar from "./components/NavBar";
 import { Route, Switch } from 'react-router-dom';
 import SpaceShips from './components/SpaceShips';
-import SpaceX from './components/SpaceX';
+import Launches from './components/Launches';
 import Missions from './components/Missions';
 
 import RocketDetails from './components/RocketDetails'
@@ -26,7 +26,7 @@ function App() {
       <NavBar />
       <Switch>
         <Route exact path="/" render={(props) => <SpaceShips {...props} />} />
-        <Route exact path="/SpaceX" render={(props) => <SpaceX {...props} />} />
+        <Route exact path="/Launches" render={(props) => <Launches {...props} />} />
         <Route exact path="/Missions" render={(props) => <Missions {...props} />} />
         <Route exact path="/Missions/:mission_id" render={(props) => <MissionDetails {...props} />} />
         <Route exact path="/SpaceShips/:rocket_id" render={(props) => <RocketDetails {...props} />} />
