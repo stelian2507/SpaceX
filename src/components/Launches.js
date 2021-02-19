@@ -8,8 +8,10 @@ function Launches(props) {
 
     useEffect(() => {
         axios.get('https://api.spacexdata.com/v3/launches').then((res) => {
-            console.log(res.data)
-            setLaunches(res.data);
+            let rand = Math.floor(Math.random() * 50)
+              
+        console.log(res.data[rand])
+            setLaunches(res.data[rand]);
 
         });
     }, []);
@@ -18,10 +20,10 @@ function Launches(props) {
         return launches.map((eachlaunches) => {
             console.log(eachlaunches)
             return (
-                <div>
+                <div className='launchesS'>
                     {eachlaunches.data}
-                    Cost Per Lunch:
-                    {eachlaunches.data}
+                    
+                
                 </div>
             );
         });
@@ -29,8 +31,8 @@ function Launches(props) {
     };
     return (
         <div className="launchesX">
-            {/* {launches.name}  */}
             HELOOOOOOOOOOOOOO
+            {launches.links?.article_link}
             {showlaunches}
         </div>
     );
