@@ -8,7 +8,6 @@ function Launches(props) {
 
     useEffect(() => {
         axios.get('https://api.spacexdata.com/v3/launches').then((res) => {
-            //console.log(res.data[0].rocket_name);
             console.log(res.data)
             setLaunches(res.data);
 
@@ -16,7 +15,7 @@ function Launches(props) {
     }, []);
 
     const showlaunches = () => {
-        return launches((eachlaunches) => {
+        return launches.map((eachlaunches) => {
             console.log(eachlaunches)
             return (
                 <div>
@@ -27,12 +26,12 @@ function Launches(props) {
             );
         });
 
-    }
+    };
     return (
-        <div className="launches">
-            {launches.name} {launches.founder}
-            {/* {showspacex()} */}
+        <div className="launchesX">
+            {/* {launches.name}  */}
             HELOOOOOOOOOOOOOO
+            {showlaunches}
         </div>
     );
 }
