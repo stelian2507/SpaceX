@@ -22,9 +22,9 @@ function Launches(props) {
             <h6>Launch Name:</h6>
             <p className="launchName">{launches.mission_name}</p>
             <h6>Year Of The Launch:</h6>
-            <h2>{launches.launch_year}</h2>
+            <h2 className='launchYear'>{launches.launch_year}</h2>
             <h6>Rocket Model:</h6>
-            <h3>{launches.rocket?.rocket_name}</h3>
+            <h3 className='modelRocket'>{launches.rocket?.rocket_name}</h3>
             <p className='rocketDescription'>{launches.details}</p>
             <p className='info'>More Info at:</p><a href='' className='artical'>{launches.links?.article_link}</a>
         </div>
