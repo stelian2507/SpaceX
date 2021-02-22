@@ -10,6 +10,7 @@ import Launches from './components/Launches';
 import Missions from './components/Missions';
 import RocketDetails from './components/RocketDetails'
 import MissionDetails from './components/MissionDetails'
+import Footer from './components/Footer'
 
 function App() {
   // useEffect(() => {
@@ -30,6 +31,7 @@ function App() {
         <Route exact path="/Missions/:mission_id" render={(props) => <MissionDetails {...props} />} />
         <Route exact path="/SpaceShips/:rocket_id" render={(props) => <RocketDetails {...props} />} />
       </Switch>
+      <Footer />
     </div>
   );
 }
