@@ -32,11 +32,11 @@ function Launches(props) {
     };
     return (
         <div className="launchesX">
-            <p>{launches.mission_name}</p>
-            <p>{launches.launch_year}</p>
-            <p>{launches.rocket?.rocket_name}</p>
-            <p>{launches.details}</p>
-            <p>{launches.links?.article_link}</p>
+            <p className="spaceShips">{launches.mission_name}</p>
+            <h2>{launches.launch_year}</h2>
+            <h3>{launches.rocket?.rocket_name}</h3>
+            <p className='rocketDescription'>{launches.details}</p>
+            <p className='info'>More Info at:</p><a href='' className='artical'>{launches.links?.article_link}</a>
             {showlaunches}
         </div>
     );

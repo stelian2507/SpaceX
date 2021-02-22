@@ -17,9 +17,9 @@ function Missions(props) {
         return mission.map((eachmission) => {
             console.log(eachmission)
             return (
-                <div className='MissionX'>
-                   <h1>{eachmission.mission_name}</h1> 
-                    <p>{eachmission.description}</p>
+                <div className="missionX">
+                   <h1 className="spaceShips">{eachmission.mission_name}</h1> 
+                    <p className="rocketDescription">{eachmission.description}</p>
                     
 
     
@@ -28,7 +28,7 @@ function Missions(props) {
         });
     };
     return (
-        <div className='missionsX'>
+        <div className="missionOne">
 
             MISSION
             
