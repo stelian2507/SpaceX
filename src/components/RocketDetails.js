@@ -16,15 +16,15 @@ function Rocketdetails(props) {
     function eachimage() {
         return rocketdetails.flickr_images?.map(eachimage => {
             return (
-                <img src={eachimage} />
+                <img className="detailImg" src={eachimage} />
             )
         })
     }
     return (
         <div className='rocketDetails'>
-            <p>{rocketdetails.rocket_name}</p>
+            <p className="spaceShips">{rocketdetails.rocket_name}</p>
 
-            <p>{rocketdetails.description}</p>
+            <p className="rocketDescription">{rocketdetails.description}</p>
             <p>{eachimage()}</p>
 
 
