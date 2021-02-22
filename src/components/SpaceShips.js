@@ -19,8 +19,9 @@ function SpaceShips(props) {
             console.log(eachspace)
             return (
                 <div className='rockets'>
-                    {eachspace.rocket_name}
-                    <Link to={`/SpaceShips/${eachspace.rocket_id}`} ><img src={eachspace.flickr_images} /></Link>
+                    <h5 className="rocketName">{eachspace.rocket_name}</h5>
+                    <Link className="textLink" to={`/SpaceShips/${eachspace.rocket_id}`} >
+                        <img src={eachspace.flickr_images} /> </Link>
                 </div>
             );
         });

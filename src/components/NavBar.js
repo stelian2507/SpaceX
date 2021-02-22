@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom'
 function NavBar(props) {
     return (
         <nav id='navigationBar'>
-            <Link to="/">Space Ship</Link>
-            <Link to="/Missions">Missions</Link>
-            <Link to="/Launches">Launches</Link>
+            <Link className="textLink" to="/">Space Ship</Link>
+            <Link className="textLink" to="/Missions">Missions</Link>
+            <Link className="textLink" to="/Launches">Launches</Link>
 
 
         </nav>
