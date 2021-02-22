@@ -60,6 +60,12 @@
   border-radius: 10%;
   
 }
+
+.rockets img:hover {
+  transform: scale(1.1);
+  transition: 0.2s
+}
+
   
 
 
@@ -145,10 +151,15 @@
 .detailImg {
   width: 50%;
   border-radius: 10%;
-  padding: 10px; 
+  padding: 15px; 
 }
 
 .rocketDescription {
   width: 70%;
   font-size: 30px;
+}
+
+.detailImg:hover {
+  transform: scale(1.1);
+  transition: 0.2s
 }
