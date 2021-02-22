@@ -16,20 +16,7 @@ function Launches(props) {
         });
     }, []);
 
-    const showlaunches = () => {
-        return launches.map((eachlaunches) => {
-            console.log(eachlaunches)
-            return (
-                <div className='launchesS'>
-                    {eachlaunches.data}
-
-
-
-                </div>
-            );
-        });
-
-    };
+    
     return (
         <div className="launchesX">
             <p className="spaceShips">{launches.mission_name}</p>
@@ -37,7 +24,6 @@ function Launches(props) {
             <h3>{launches.rocket?.rocket_name}</h3>
             <p className='rocketDescription'>{launches.details}</p>
             <p className='info'>More Info at:</p><a href='' className='artical'>{launches.links?.article_link}</a>
-            {showlaunches}
         </div>
     );
 }
