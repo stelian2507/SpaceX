@@ -8,7 +8,7 @@ function Footer(props) {
             <Link className="textLink" to="https://www.linkedin.com/in/stelian-grosu">Stelian</Link>
             <Link className="textLink" to="https://www.linkedin.com/in/rastkodurica">Rastko</Link> */}
             <p className='footerP'>Power By:
-            <a href='https://www.linkedin.com/in/stelian-grosu'>Stelian</a>
+            <a href='https://www.linkedin.com/in/stelian-grosu'>Stelian</a>&
                 <a href='https://www.linkedin.com/in/rastkodurica'>Rastko</a>
             </p>
         </footer>

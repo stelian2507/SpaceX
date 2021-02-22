@@ -278,7 +278,7 @@ h6 {
 a {
   color: white;
   text-decoration: none;
-  margin-left: 100px;
+  
 }
 
 .launchYear {
@@ -288,3 +288,8 @@ a {
 .modelRocket {
   margin-top: 10px;
 }
+
+/* .footerP {
+  display: flex;
+  justify-content: space-between;
+} */
