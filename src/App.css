@@ -289,7 +289,7 @@ a {
   margin-top: 10px;
 }
 
-/* .footerP {
-  display: flex;
-  justify-content: space-between;
-} */
+.rocketDescription:hover {
+    transform: scale(1.1);
+    transition: 0.2s
+  }
