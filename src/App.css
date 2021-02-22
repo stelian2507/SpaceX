@@ -238,6 +238,7 @@ footer {
  font-size: 25px;
  display: flex;
  justify-content: space-around;
+ color: white;
 }
 
 h6 {
@@ -272,4 +273,10 @@ h6 {
     1px 22px 10px rgba(16,16,16,0.2),
     1px 25px 35px rgba(16,16,16,0.2),
     1px 30px 60px rgba(16,16,16,0.4);
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  margin-left: 100px;
 }
